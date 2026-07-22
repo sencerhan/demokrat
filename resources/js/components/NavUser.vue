@@ -22,7 +22,7 @@ const { isMobile, state } = useSidebar();
 </script>
 
 <template>
-    <SidebarMenu>
+    <SidebarMenu v-if="user">
         <SidebarMenuItem>
             <DropdownMenu>
                 <DropdownMenuTrigger as-child>
@@ -31,7 +31,7 @@ const { isMobile, state } = useSidebar();
                         class="data-[state=open]:bg-sidebar-accent data-[state=open]:text-sidebar-accent-foreground"
                         data-test="sidebar-menu-button"
                     >
-                        <UserInfo :user="user" />
+                        <UserInfo :user="user!" />
                         <ChevronsUpDown class="ml-auto size-4" />
                     </SidebarMenuButton>
                 </DropdownMenuTrigger>
@@ -47,7 +47,7 @@ const { isMobile, state } = useSidebar();
                     align="end"
                     :side-offset="4"
                 >
-                    <UserMenuContent :user="user" />
+                    <UserMenuContent :user="user!" />
                 </DropdownMenuContent>
             </DropdownMenu>
         </SidebarMenuItem>

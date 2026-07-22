@@ -25,10 +25,10 @@ defineProps<{
                 :href="home()"
                 class="flex items-center gap-2 self-center font-medium"
             >
-                <div class="flex h-9 w-9 items-center justify-center">
-                    <AppLogoIcon
-                        class="size-9 fill-current text-black dark:text-white"
-                    />
+                <div
+                    class="flex size-11 items-center justify-center rounded-xl bg-linear-to-b from-indigo-500 to-violet-600 shadow-sm ring-1 ring-white/10"
+                >
+                    <AppLogoIcon class="size-7 text-white" />
                 </div>
             </Link>
 
